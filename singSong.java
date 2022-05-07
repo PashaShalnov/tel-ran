@@ -1,5 +1,5 @@
 
-public class singSong {
+public class SingSong {
 	public static void main(String[] args) {
 		System.out.println("Come as you are, as you were\n"
 				+ "As I want you to be\n"
