@@ -1,4 +1,8 @@
 
+// three() не запускает ни одного метода
+// ни один метод не запускает three() 
+// main() запускает 3 метода
+
 public class FunctionCalls {
 
 	public static void main(String[] args) {
@@ -30,7 +34,3 @@ public class FunctionCalls {
 	}
 
 }
-
-
-// 3 не запускает ни одного метода, ее же ничего не запускает
-// main запускает 3 метода
