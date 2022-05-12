@@ -2,7 +2,7 @@
 public class TaxCounter {
 
 	public static void main(String[] args) {
-		double income = 5000;
+		double income = 10000;
 		taxCounter(income);
 	}
 
