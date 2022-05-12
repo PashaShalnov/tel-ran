@@ -3,10 +3,10 @@ public class TaxCounter {
 
 	public static void main(String[] args) {
 		double income = 5000;
-		counter(income);
+		taxCounter(income);
 	}
 
-	private static double counter(double inc) {
+	private static double taxCounter(double inc) {
 		double tax = 0;
 		if (inc > 1000) {
 			tax = ((inc - 1000) / 100 * 17);
