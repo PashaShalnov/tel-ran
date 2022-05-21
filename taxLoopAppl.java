@@ -6,6 +6,8 @@ public class taxLoopAppl {
 		System.out.println("Tax Israel = " + tax);
 		double tax2 = calcTaxIsrael(100000, 8); // new version (advanced) 
 		System.out.println("Tax Israel 2 = " + tax2);
+		double netto = salaryNetto(100000, 8);
+		System.out.println("Salary Netto = " + netto);
 	}
 
 	public static double calcTaxIsrael2(double salary, double taxAllowance) {
