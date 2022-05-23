@@ -1,2 +1,3 @@
 # tel-ran
-In this derictory I collect homeworks I am making in Tel-Ran college
+
+I collect homeworks in this derictory I am making in Tel-Ran college
