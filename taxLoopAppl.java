@@ -2,11 +2,11 @@
 public class taxLoopAppl {
 
 	public static void main(String[] args) {
-		double tax = calcTaxIsrael(100000, 8); // previous version
+		double tax = calcTaxIsrael(50000, 0); // previous version
 		System.out.println("Tax Israel = " + tax);
-		double tax2 = calcTaxIsrael(100000, 8); // new version (advanced) 
+		double tax2 = calcTaxIsrael2(50000, 0); // new version (advanced)
 		System.out.println("Tax Israel 2 = " + tax2);
-		double netto = salaryNetto(100000, 8);
+		double netto = salaryNetto(120000, 2.75);
 		System.out.println("Salary Netto = " + netto);
 	}
 
@@ -14,22 +14,19 @@ public class taxLoopAppl {
 		double[] salaryRange = { 0., 6450., 9240., 14840., 20620., 42910. };
 		double[] taxes = { 0.1, 0.14, 0.2, 0.31, 0.35, 0.47 };
 		double res = -taxAllowance * 223;
+		;
 
 		for (int i = 0; i < salaryRange.length - 1; i++) {
 			if (salary >= salaryRange[i] && salary < salaryRange[i + 1]) {
-				res = res + (salary - salaryRange[i + 1]);
+				res = res + (salary - salaryRange[i]) * taxes[i];
 				return res >= 0 ? res : 0;
 			} else
 				res = res + (salaryRange[i + 1] - salaryRange[i]) * taxes[i];
-			i++;
 		}
-		return res;
+		res = res + (salary - salaryRange[salaryRange.length - 1]) * taxes[taxes.length - 1];
+		return res >= 0 ? res : 0;
 	}
 
-	
-	
-	
-	
 	public static double calcTaxIsrael(double salary, double taxAllowance) {
 		double res = -taxAllowance * 223;
 		if (salary >= 0 && salary < 6450) {
